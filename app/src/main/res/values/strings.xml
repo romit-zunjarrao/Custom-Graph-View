@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">CustomViewAssignment</string>
+    <string name="date">Date</string>
+    <string name="student_count">Student Count</string>
+    <string name="add_data">ADD DATA</string>
+    <string name="show_lines">Show Lines</string>
+    <string name="highlight_integral">Highlight Integral</string>
+    <string name="clear_data">CLEAR DATA</string>
+    <string name="five">5</string>
+    <string name="ten">10</string>
+</resources>

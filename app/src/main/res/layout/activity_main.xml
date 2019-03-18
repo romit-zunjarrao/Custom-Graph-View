@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    >
+
+    <com.example.customviewassignment.LineGraphView
+        android:id="@+id/graph"
+        android:layout_height="300dp"
+        android:layout_width="match_parent"
+        app:lineColor="@android:color/holo_blue_dark"
+        app:maxColor="@android:color/holo_orange_dark"
+        app:pointColor="@android:color/background_dark"
+        />
+
+    <TextView
+        android:layout_below="@+id/graph"
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="75dp"
+        android:padding="10dp"
+        android:text="@string/date"
+        android:textSize="20sp"
+        android:layout_alignEnd="@id/studentCount"/>
+
+    <EditText
+        android:id="@+id/dateEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/date"
+        android:layout_alignTop="@id/date"
+        android:layout_alignBottom="@id/date"
+        android:inputType="date"
+        android:padding="10dp"
+        android:textSize="20sp"
+        />
+
+    <TextView
+        android:id="@+id/studentCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/student_count"
+        android:layout_below="@+id/date"
+        android:textSize="20sp"
+        android:padding="10dp"
+
+        />
+
+    <EditText
+        android:id="@+id/studentCountEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/studentCount"
+        android:layout_below="@id/dateEditText"
+        android:textSize="20sp"
+        android:padding="10dp"
+
+        />
+    <LinearLayout
+        android:id="@+id/btnLinearLayout"
+        android:layout_below="@id/studentCount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="10dp">
+    <Button
+        android:id="@+id/addData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/add_data"
+        android:textSize="20sp"
+        android:padding="10dp"
+        />
+
+    <Button
+        android:id="@+id/clearData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/clear_data"
+        android:textSize="20sp"
+        android:padding="10dp"
+        />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/showLines"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/show_lines"
+        android:layout_below="@id/btnLinearLayout"
+        android:textSize="20sp"
+        android:padding="10dp"/>
+    <CheckBox
+        android:id="@+id/showLinesCB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/showLines"
+        android:layout_below="@id/btnLinearLayout"
+        android:layout_alignTop="@id/showLines"
+        android:layout_alignBottom="@id/showLines"
+        />
+
+    <TextView
+        android:id="@+id/highlighIntegrals"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/highlight_integral"
+        android:layout_below="@id/showLines"
+        android:textSize="20sp"
+        android:padding="10dp"/>
+    <CheckBox
+        android:id="@+id/highlighIntegralsCB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/highlighIntegrals"
+        android:layout_below="@id/showLinesCB"
+        android:layout_alignTop="@id/highlighIntegrals"
+        android:layout_alignBottom="@id/highlighIntegrals"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/highlighIntegrals"
+        android:orientation="horizontal"
+        android:weightSum="8"
+        >
+
+    <TextView
+        android:id="@+id/lowerLimit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="2dp"
+        android:textSize="20sp"
+        android:layout_weight="1"
+        android:text="@string/five"
+        android:gravity="end"/>
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:max="10"
+        android:min="5"
+        android:layout_weight="6"
+        />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="2dp"
+        android:textSize="20sp"
+        android:layout_weight="1"
+        android:text="@string/ten"/>
+    </LinearLayout>
+</RelativeLayout>
